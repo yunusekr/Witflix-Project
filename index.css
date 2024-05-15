@@ -437,6 +437,10 @@ color:white;
         display: none;
      }
 
+     .container2 img{
+        margin-right: 30px;
+     }
+
      .footer-section{
         flex-direction: column;
         align-items: center;
