@@ -457,6 +457,13 @@ color:white;
      .recommend-box{
          padding: 200px 200px 1px 10px;
      }
+
+     .footer-apps{
+        p{
+            text-align: center;
+        }
+
+     }
     
 }
 
