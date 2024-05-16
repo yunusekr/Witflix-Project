@@ -4,7 +4,6 @@ body{
     border:1px; 
     background-color: rgb(17, 15, 15);
     font-family: Georgia, serif;
-    
 }
 
 .movie-details{
@@ -144,12 +143,30 @@ align-items: center;
 
  .recommend-boxes{
     display: flex;
-    gap:3.4%
-   
- }
-
- .recommend-box{
+    gap:3.4%;
+    overflow: auto;
     
+}
+    ::-webkit-scrollbar {
+        width: 7px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+        to bottom,
+        #c91313,
+        #0c090b);
+    
+        border-radius: px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #474747;
+    }
+
+
+ .recommend-box{ 
     border-radius: 1rem;
     position: relative;
     background:url('29276.webp'); background:
@@ -172,10 +189,8 @@ align-items: center;
                 url('29276.webp'); 
                 background-size: 100% 100%;
                 padding: 200px 250px 30px 70px;
-    
  }
  
-
  
  .recommend-box h1{
     color:rgb(119, 22, 22);
@@ -386,6 +401,7 @@ color:white;
   .demo-dropdown > li:hover ul {
     display: block; 
 }
+
 
 
 
