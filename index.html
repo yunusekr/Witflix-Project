@@ -1,270 +1,548 @@
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
-    <title>WITFLIX</title>
-</head>
-<body>
-    
-<header class="main-container">
-    <div class="container1"> 
-        <ul class="menu cf">
-            <li>
-              <a href=""><i style="font-size: 25px; color:white" class="fas fa-bars"></i></a>
-              <ul class="submenu">
-                <li><a href="">Anasayfa</a></li>
-                <li><a href="">Programlar</a></li>
-                <li><a href="">Diziler</a></li>
-                <li><a href="">İletişim</a></li>
-              </ul>			
-            </li>
-          </ul> 
-        <!-- 
-        <ul  class="demo-dropdown">
-            <li><i style="font-size: 25px; color:white" class="fas fa-bars"></i><a href="#"></a>
-                <ul>
-                    <li><a href="#">Anasayfa</a></li>
-                    <li><a href="#">Programlar</a></li>
-                    <li><a href="#">Diziler</a></li>
-                    <li><a href="#">İletişim</a></li>
-                </ul>
-            </li>
-        </ul>    
-    -->
-        <h1>WITFLIX</h1>      
-        <nav  class="nav-items">       
-        <a href="">Anasayfa</a>
-        <a href="">Programlar</a>
-        <a href="">Diziler</a>
-        <a href="">İletişim</a>
+    <link href="index.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/379336a8ba.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* width */
+      ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+      }
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Backgraund Video -->
+    <div class="videop">
+      <video autoplay muted loop id="myVideo">
+        <source src="/yüzük.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    <!-- Backgraund Video -->
+    <header>
+      <div>
+        <!-- Menu Button -->
+        <label class="popup">
+          <input type="checkbox" />
+          <div class="burger" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="popup-window">
+            <legend>Menu</legend>
+            <ul>
+              <li>
+                <button>
+                  <i class="fa-solid fa-house"></i>
+                  <span>Home Page</span>
+                </button>
+              </li>
+              <hr />
+              <li>
+                <button>
+                  <i class="fa-solid fa-clapperboard"></i>
+                  <span>Series</span>
+                </button>
+              </li>
+              <hr />
+              <li>
+                <button>
+                  <i class="fa-solid fa-film"></i>
+                  <span>Movies</span>
+                </button>
+              </li>
+              <hr />
+              <li>
+                <button>
+                  <i class="fa-solid fa-plus"></i>
+                  <span>New Added</span>
+                </button>
+              </li>
+              <hr />
+              <li>
+                <button>
+                  <i class="fa-solid fa-bars-staggered"></i>
+                  <span>My List</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </label>
+        <!-- Menu Button -->
+        <img src="/unnamed-Photoroom.png" style="width: 100px" />
+      </div>
+      <nav class="header-nav">
+        <a href="#">Homa Page</a>
+        <a href="#">Series</a>
+        <a href="#">Movies</a>
+        <a href="#">New Added</a>
+        <a href="#">My List</a>
+      </nav>
+      <div class="header-last">
+        <!-- Search Button -->
+        <div class="container">
+          <input checked="" class="checkbox" type="checkbox" />
+          <div class="mainbox">
+            <div class="iconContainer">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input class="search_input" placeholder="search" type="text" />
+          </div>
+        </div>
+        <!-- Search Button -->
+        <i class="fa-regular fa-bell"></i>
+        <!-- Profile -->
+        <div class="body">
+          <input type="checkbox" id="check" />
+          <figure class="avatar">
+            <picture class="avatar-main">
+              <img src="/profile.png" />
+            </picture>
+            <label class="avatar-sub git">
+              <img src="/profile.png" />
+            </label>
+            <label class="avatar-sub twit">
+              <img src="/pay.png" />
+            </label>
+            <label class="avatar-sub dA">
+              <img src="/support.png" />
+            </label>
+            <label class="avatar-sub social" for="check">
+              <img class="open" src="/settings.png" />
+              <img class="close" src="/info.png" />
+              <div class="bubble">Click for more!</div>
+            </label>
+          </figure>
+          <div class="clarefix"></div>
+        </div>
+        <!-- Profile -->
+      </div>
+    </header>
+    <article>
+      <h1>The Lord Of The Rings</h1>
+      <div class="raiting">
+        <p class="age">+15</p>
+        <p class="epi">
+          <i class="fa-brands fa-imdb episode"></i
+          ><i class="fa-solid fa-star" style="font-size: 16; color: red"></i
+          ><i class="fa-solid fa-star" style="font-size: 16; color: red"></i
+          ><i class="fa-solid fa-star" style="font-size: 16; color: red"></i
+          ><i class="fa-solid fa-star" style="font-size: 16; color: red"></i
+          ><i class="fa-solid fa-star" style="font-size: 16; color: red"></i>
+        </p>
+        <p class="time">3 hours</p>
+      </div>
+      <div>
+        <p class="pool" style="font-size: 1.9rem">
+          This ring is the power that the evil Lord Sauron needs to control the
+          entire world. However, to destroy this power, the ring itself must be
+          destroyed. Hobbit Frodo Baggins and his friends embark on a long
+          journey filled with dangers to accomplish this task. Woven with magic,
+          friendship, betrayal, and courage, this story delves deeply into human
+          nature and the relentless battle between good and evil.
+        </p>
+        <!-- MORE İNFO -->
+        <div class="about change">
+          <a
+            class="bg_links social portfolio"
+            href="https://www.rafaelalucas.com"
+            target="_blank"
+          >
+            <span class="icon"></span>
+          </a>
+          <a
+            class="bg_links social dribbble"
+            href="https://dribbble.com/rafaelalucas"
+            target="_blank"
+          >
+            <span class="icon"></span>
+          </a>
+          <a
+            class="bg_links social linkedin"
+            href="https://www.linkedin.com/in/rafaelalucas/"
+            target="_blank"
+          >
+            <span class="icon"></span>
+          </a>
+          <a class="bg_links logo"></a>
+        </div>
+        <button class="butn change"><span>More İnfo</span></button>
+        <!-- MORE İNFO -->
+      </div>
+      <div>
+        <button class="ply-btn">
+          <i class="fa-regular fa-circle-play"></i> Play Now
+        </button>
+        <button class="ply-btn">
+          <i class="fa-solid fa-clapperboard"></i> Series Page
+        </button>
+      </div>
+    </article>
+    <main>
+      <section class="step">
+        <div class="select">
+          <p class="select-btn">Series</p>
+          <p class="select-btn">View all</p>
+        </div>
+        <div class="movies">
+          <div
+            class="movie"
+            style="
+              background-image: url('/harry.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Harry Potter</h2>
+            <p class="age">+13</p>
+            <p class="time">2 hours</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/Avatar-Film-Posteri.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Avatar</h2>
+            <p class="age">+13</p>
+            <p class="time">2 hours 30 min</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/PEfnGIpJMEKT_XSiwMmK1w.webp');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Black Adam</h2>
+            <p class="age">+13</p>
+            <p class="time">2 hours</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/joker-ikili-delilik-202482713612d725348b0f6649ceab3d354503a68ee2.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Joker</h2>
+            <p class="age">+15</p>
+            <p class="time">2 hours 43 min</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/5ee7348e0f25442ba822c183.webp');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Zindan Adası</h2>
+            <p class="age">+13</p>
+            <p class="time">2 hours</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/images.jpeg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Batman</h2>
+            <p class="age">+15</p>
+            <p class="time">2 hours 23 min</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="step">
+        <div class="select">
+          <p class="select-btn">Movies</p>
+          <p class="select-btn">View all</p>
+        </div>
+        <div class="movies">
+          <div
+            class="movie"
+            style="
+              background-image: url('/252853.webp');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Captain America</h2>
+            <p class="age">+13</p>
+            <p class="time">2 hours</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/HizliveÖfkeli_HobbsveShaw.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Fast & Furious</h2>
+            <p class="age">+15</p>
+            <p class="time">2 hours</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/inception.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Inception</h2>
+            <p class="age">+13</p>
+            <p class="time">2 hours 52 min</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/Life-of-Pi.webp');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Life Of Pi</h2>
+            <p class="age">+13</p>
+            <p class="time">2 hour 10 min</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/s-10cae727a0a9a85bc2da4a2847ebae28872944fb.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Braveheart</h2>
+            <p class="age">+15</p>
+            <p class="time">2 hours 32 min</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/evde-tek-basina.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Home Alone</h2>
+            <p class="age">+13</p>
+            <p class="time">1 hours 50 min</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="step">
+        <div class="select">
+          <p class="select-btn">Recommended for you</p>
+          <p class="select-btn">View all</p>
+        </div>
+        <div class="movies">
+          <div
+            class="movie"
+            style="
+              background-image: url('/godfather.PNG');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>The Godfather</h2>
+            <p class="age">+15</p>
+            <p class="time">3 hours</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/intouchables.PNG');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>The Intouchables</h2>
+            <p class="age">+13</p>
+            <p class="time">2 hours 22 min</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/Matrix1-1999-2.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Matrix</h2>
+            <p class="age">+15</p>
+            <p class="time">2 hours 48 min</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/escape.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Escape Room</h2>
+            <p class="age">+18</p>
+            <p class="time">2 hours 32 min</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/unnamed.png');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Mad Max</h2>
+            <p class="age">+15</p>
+            <p class="time">2 hours 44 min</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+          <div
+            class="movie"
+            style="
+              background-image: url('/twilight.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <h2>Twilight</h2>
+            <p class="age">+13</p>
+            <p class="time">3 hours</p>
+            <button class="ply">
+              <i class="fa-regular fa-circle-play"></i> Play Now
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <footer>
+    <div class="footer-div">
+      <div class="last-icon">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+      <div class="last-nav">
+        <nav>
+          <a href="#">Sesli Betimleme</a>
+          <a href="#">Yatırımcı İlişkileri</a>
+          <a href="#">Yasal Hükümler</a>
         </nav>
+        <nav>
+          <a href="#">Yardım Merkezi</a>
+          <a href="#">İş İmkanları</a>
+          <a href="#">Çerez Tercihleri</a>
+        </nav>
+        <nav>
+          <a href="#">Hediye Kartları</a>
+          <a href="#">Kullanım Koşulları</a>
+          <a href="#">Kurumsal Bilgiler</a>
+        </nav>
+        <nav>
+          <a href="#">Medya Merkezi</a>
+          <a href="#">Gizlilik</a>
+          <a href="#">Bize Ulaşın</a>
+        </nav>
+      </div>
+      <!-- Contact -->
+      <div class="tooltip-container">
+        <span class="tooltip">furkanguven.me@gmail.com</span>
+        <span class="info">Contact İnformation</span>
+      </div>
+      <!-- Contact -->
+      <div class="hzm">
+        <p class="hizmet">Hizmet Kodu</p>
+        <p class="business">© 1997-2024 Witflix, Inc.</p>
+      </div>
     </div>
-    <div class="container2">
-        <div class="search">
-            <input checked="" class="checkbox" type="checkbox"> 
-            <div class="mainbox">
-                <div class="iconContainer">
-                    <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="search_icon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
-                </div>
-             <input class="search_input" placeholder="search" type="text">
-            </div>
-        </div>
-        
-        <i class="far fa-bell notification"></i>
-        <img src="Remove-bg.ai_1715681815573.png" alt="">
-    </div>
-</header>
-
-<!-- Film Bilgileri-->
-    <div class="movie-info">
-        <div class="movie-details">
-            <img src="23904-2-lord-of-the-rings-logo-file.png" alt="">
-            
-            <div class ="movie-rank">
-                <i class="fas fa-star stars"></i>
-                <i class="fas fa-star stars"></i>
-                <i class="fas fa-star stars"></i>
-                <i class="fas fa-star stars"></i>
-                <i class="fas fa-star stars"></i>
-                <p style="margin-left: 0.3rem;">10.0 <span style="color:gray">IMDB</span></p>
-                <p class="limit">18+</p>
-                <p style="margin-left: 0.5rem;">2 h 59 min</p>
-            </div>
-              <p style ="width: 30%; margin-top:0.3rem">Asırlardır kayıp olan yüzük bulunur ve kaderin garip bir cilvesi sonucu, küçük bir Hobbit olan Frodonun eline geçer. İhtiyar Gandalf, bu yüzüğün Kara Lord Saurona ait özel yüzük olduğunu anlar. Frodonun yapması gereken, Kıyametin Çatlakları olarak anılan diyara dalarak epik bir mücadeleye girişmek ve bu yüzüğü ebediyen ortadan kaldırmaktır.</p>
-              <p class ="infos"><span class = "red">Yönetmen :</span> 
-                Peter Jackson</p>  
-              <p class ="infos"><span class = "red">Oyuncular :</span> 
-                    Elijah Wood, Ian McKellen, Orlando Bloom, Sean Bean</p>
-              <p class ="infos"><span class = "red">Tür :</span>                   
-Dram Filmleri, Fantastik Filmler, Macera Filmleri</p>   
-            <div class="play-btn"><span style="font-weight: bold;">Play Now</span>  
-                <i class="fas fa-play play-button"></i>        
-            </div>   
-             </div>
-    </div>
-<!--Öneriler-->
- 
-        <div class="recommends">
-            <h3 style="color:white">Popüler diziler</h3>
-            <div  class="recommend-boxes">
-                <div style="border:1px solid white;" class="recommend-box">              
-                <div style ="position: absolute; bottom: 0;">
-                <div class="recommend-info">
-                <p>18+</p>
-                <p style="margin-left: 0.5rem;">2 h 59 min</p>
-                </div>
-                <div class="play-btn-new">
-                    <span style="font-weight: bold;">Play Now</span>  
-                    <i class="fas fa-play play-button"></i>        
-                </div> 
-                 </div> 
-                </div>  
-
-                <div style="border:1px solid white;" class="recommend-box">              
-                    <div style ="position: absolute; bottom: 0;">
-                    <div class="recommend-info">
-                    <p>18+</p>
-                    <p style="margin-left: 0.5rem;">2 h 59 min</p>
-                    </div>
-                    <div class="play-btn-new">
-                        <span style="font-weight: bold;">Play Now</span>  
-                        <i class="fas fa-play play-button"></i>        
-                    </div> 
-                     </div> 
-                    </div> 
-
-                    <div style="border:1px solid white;" class="recommend-box">              
-                        <div style ="position: absolute; bottom: 0;">
-                        <div class="recommend-info">
-                        <p>18+</p>
-                        <p style="margin-left: 0.5rem;">2 h 59 min</p>
-                        </div>
-                        <div class="play-btn-new">
-                            <span style="font-weight: bold;">Play Now</span>  
-                            <i class="fas fa-play play-button"></i>        
-                        </div> 
-                         </div> 
-                        </div> 
-
-                        <div style="border:1px solid white;" class="recommend-box">              
-                            <div style ="position: absolute; bottom: 0;">
-                            <div class="recommend-info">
-                            <p>18+</p>
-                            <p style="margin-left: 0.5rem;">2 h 59 min</p>
-                            </div>
-                            <div class="play-btn-new">
-                                <span style="font-weight: bold;">Play Now</span>  
-                                <i class="fas fa-play play-button"></i>        
-                            </div> 
-                             </div> 
-                        </div>  
-                        
-                        <div style="border:1px solid white;  " class="recommend-box">              
-                            <div style ="position: absolute; bottom: 0;">
-                            <div class="recommend-info">
-                            <p>18+</p>
-                            <p style="margin-left: 0.5rem;">2 h 59 min</p>
-                            </div>
-                            <div class="play-btn-new">
-                                <span style="font-weight: bold;">Play Now</span>  
-                                <i class="fas fa-play play-button"></i>        
-                            </div> 
-                             </div> 
-                        </div> 
-                        
-                        
-            </div>
-            
-            <br><br>
-            <h3 style="color:white">Senin İçin Öneriler</h3>
-            <div class="recommend-boxes"> 
-                <div style="border:1px solid white;" class="recommend-box">              
-                    <div style ="position: absolute; bottom: 0;">
-                    <div class="recommend-info">
-                    <p>18+</p>
-                    <p style="margin-left: 0.5rem;">2 h 59 min</p>
-                    </div>
-                    <div class="play-btn-new">
-                        <span style="font-weight: bold;">Play Now</span>  
-                        <i class="fas fa-play play-button"></i>        
-                    </div> 
-                     </div> 
-                    </div>  
-    
-                    <div style="border:1px solid white;" class="recommend-box">              
-                        <div style ="position: absolute; bottom: 0;">
-                        <div class="recommend-info">
-                        <p>18+</p>
-                        <p style="margin-left: 0.5rem;">2 h 59 min</p>
-                        </div>
-                        <div class="play-btn-new">
-                            <span style="font-weight: bold;">Play Now</span>  
-                            <i class="fas fa-play play-button"></i>        
-                        </div> 
-                         </div> 
-                        </div> 
-    
-                        <div style="border:1px solid white;" class="recommend-box">              
-                            <div style ="position: absolute; bottom: 0;">
-                            <div class="recommend-info">
-                            <p>18+</p>
-                            <p style="margin-left: 0.5rem;">2 h 59 min</p>
-                            </div>
-                            <div class="play-btn-new">
-                                <span style="font-weight: bold;">Play Now</span>  
-                                <i class="fas fa-play play-button"></i>        
-                            </div> 
-                             </div> 
-                            </div> 
-    
-                            <div style="border:1px solid white;" class="recommend-box">              
-                                <div style ="position: absolute; bottom: 0;">
-                                <div class="recommend-info">
-                                <p>18+</p>
-                                <p style="margin-left: 0.5rem;">2 h 59 min</p>
-                                </div>
-                                <div class="play-btn-new">
-                                    <span style="font-weight: bold;">Play Now</span>  
-                                    <i class="fas fa-play play-button"></i>        
-                                </div> 
-                                 </div> 
-                            </div>  
-                            
-                            <div style="border:1px solid white;" class="recommend-box">              
-                                <div style ="position: absolute; bottom: 0;">
-                                <div class="recommend-info">
-                                <p>18+</p>
-                                <p style="margin-left: 0.5rem;">2 h 59 min</p>
-                                </div>
-                                <div class="play-btn-new">
-                                    <span style="font-weight: bold;">Play Now</span>  
-                                    <i class="fas fa-play play-button"></i>        
-                                </div> 
-                                 </div> 
-                            </div> 
-                            
-            </div>
-        </div>
-
-        <!--footer bölümü-->
-        <footer  class="footer-section">
-            <div class="footer-content">
-                <nav class="nav-items2">
-                <a href="">Anasayfa</a>
-                <a href="">Programlar</a>
-                <a href="">Diziler</a>
-                <a href="">İletişim</a>
-                 </nav>
-                <p style="color:rgb(117, 53, 53);">İnternetin sinema endüstrisine katkısıyla, film severler artık evlerinden çıkmadan dünyanın dört bir yanındaki filmleri keşfedebilirler. Dijitalleşmenin bir yansıması olarak, çeşitli online platformlar, geniş bir film yelpazesini, kullanıcıların erişimine sunmaktadır.</p>
-            </div>
-            <div class="footer-follow">
-                <p style="font-weight: bold; margin-top: 0; color:rgb(117, 53, 53);">Bizi Takip Edin</p>
-                <img src="Facebook_Logo_2023.png" alt="">
-                <img style ="padding-left: 10px;"src="Youtube_logo.png" alt="">
-                <img style ="padding-left: 10px;" src="Logo_of_Twitter.svg.webp" alt="">
-            </div>
-            
-            <div class="footer-apps">
-                <p style=" font-weight: bold; margin-top: 0; color:rgb(117, 53, 53); margin-bottom: 0px;">Uygulamalar</p>
-                <img id="apps" src="png-transparent-app-store-apple-google-play-apple-text-logo-mobile-phones.png" alt="">
-                <img id="apps" src="en_badge_web_generic.png" alt="">
-            </div>
-        </footer>
-
-
-
-
-
-
-        <!--design-->
-        <div class="designed">
-         <h1 class="designtype" style="text-align: center;">DESIGNED BY YUNUS</h1>
-        </div>
-
-        
-
-</body>
-
+  </footer>
 </html>
